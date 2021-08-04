@@ -3,8 +3,9 @@ import 'package:flutter_portofolio/screens/main_screen/components/side_menu.dart
 import 'package:flutter_portofolio/shared/shared.dart';
 
 class MainScreenBody extends StatelessWidget {
-  const MainScreenBody({Key? key}) : super(key: key);
+  const MainScreenBody({Key? key, required this.children}) : super(key: key);
 
+  final List<Widget> children;
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portofolio/screens/home_screen/home_screen.dart';
 import 'package:flutter_portofolio/screens/main_screen/main_screen.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Alwi Jein Portofolio',
       debugShowCheckedModeBanner: false,
       theme: themeData(context),
-      home: MainScreen(),
+      home: HomeScreen(),
     );
   }
 }

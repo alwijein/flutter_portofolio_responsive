@@ -10,10 +10,11 @@ class Knowladge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Divider(),
         Padding(
-          padding: EdgeInsets.all(defaultPadding),
+          padding: EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             'Knowledge',
             style: Theme.of(context).textTheme.subtitle2,

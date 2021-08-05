@@ -1,7 +1,8 @@
 class Recommendation {
-  final String? name, source, text;
+  final String name, source, text;
 
-  Recommendation({this.name, this.source, this.text});
+  Recommendation(
+      {required this.name, required this.source, required this.text});
 }
 
 final List<Recommendation> demo_recommendations = [

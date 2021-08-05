@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portofolio/screens/home_screen/my_build_animated_text.dart';
+import 'package:flutter_portofolio/screens/home_screen/components/my_build_animated_text.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
 
 class HomeBanner extends StatelessWidget {

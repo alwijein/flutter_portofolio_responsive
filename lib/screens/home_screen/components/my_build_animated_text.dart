@@ -1,6 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_portofolio/screens/home_screen/flutter_coder_text.dart';
+import 'package:flutter_portofolio/screens/home_screen/components/flutter_coder_text.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
 
 class MyBuildAnimatedText extends StatelessWidget {

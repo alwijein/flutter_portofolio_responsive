@@ -1,7 +1,7 @@
 class Project {
-  final String? title, description;
+  final String title, description;
 
-  Project({this.title, this.description});
+  Project({required this.title, required this.description});
 }
 
 List<Project> demo_projects = [
@@ -14,6 +14,11 @@ List<Project> demo_projects = [
     title: "Mobile App Pinisi Parking Spot - Flutter IOT",
     description:
         "Aplikasi pengecek parkiran di-menara pinisi menggunakan teknologi IOT yang dikirim secara realtime.",
+  ),
+  Project(
+    title: "Mobile App Vocab Daily - Flutter",
+    description:
+        "Aplikasi education untuk meningkatkan vocab bahasa inggris dalam kehidupan sehari-hari yang akan terus update setiap harinya.",
   ),
   Project(
     title: "Mobile App Vocab Daily - Flutter",

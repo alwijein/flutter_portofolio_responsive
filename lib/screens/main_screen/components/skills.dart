@@ -25,6 +25,7 @@ class Skills extends StatelessWidget {
             Expanded(
               child: AnimatedCircularProgresIndicator(
                 percentage: 0.8,
+                level: 'Advance Beginner',
                 title: 'Flutter',
               ),
             ),
@@ -32,6 +33,7 @@ class Skills extends StatelessWidget {
             Expanded(
               child: AnimatedCircularProgresIndicator(
                 percentage: 0.5,
+                level: 'Novice',
                 title: 'Laravel',
               ),
             ),
@@ -39,6 +41,7 @@ class Skills extends StatelessWidget {
             Expanded(
               child: AnimatedCircularProgresIndicator(
                 percentage: 0.7,
+                level: 'Advance Beginner',
                 title: 'Blender',
               ),
             ),

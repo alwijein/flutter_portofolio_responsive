@@ -15,7 +15,10 @@ class KnowladgeText extends StatelessWidget {
       padding: EdgeInsets.only(bottom: defaultPadding),
       child: Row(
         children: [
-          SvgPicture.asset('assets/icons/check.svg'),
+          SvgPicture.asset(
+            'assets/icons/check.svg',
+            color: primaryColor,
+          ),
           SizedBox(width: defaultPadding / 2),
           Text(title),
         ],

@@ -6,10 +6,11 @@ class AnimatedCircularProgresIndicator extends StatelessWidget {
     Key? key,
     required this.percentage,
     required this.title,
+    required this.level,
   }) : super(key: key);
 
   final double percentage;
-  final String title;
+  final String title, level;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,8 +30,9 @@ class AnimatedCircularProgresIndicator extends StatelessWidget {
                 ),
                 Center(
                   child: Text(
-                    (value * 100).toInt().toString() + '%',
-                    style: Theme.of(context).textTheme.subtitle1,
+                    level,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.overline,
                   ),
                 ),
               ],

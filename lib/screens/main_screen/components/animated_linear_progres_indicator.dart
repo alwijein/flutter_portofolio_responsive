@@ -5,9 +5,10 @@ class AnimatedLinearProgresIndicator extends StatelessWidget {
   const AnimatedLinearProgresIndicator({
     Key? key,
     required this.title,
+    required this.level,
     required this.percentage,
   }) : super(key: key);
-  final String title;
+  final String title, level;
   final double percentage;
   @override
   Widget build(BuildContext context) {
@@ -17,6 +18,7 @@ class AnimatedLinearProgresIndicator extends StatelessWidget {
         duration: defaultDuration,
         tween: Tween<double>(begin: 0, end: percentage),
         builder: (_, double value, child) => Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,6 +31,13 @@ class AnimatedLinearProgresIndicator extends StatelessWidget {
                 ),
                 Text((value * 100).toInt().toString() + '%'),
               ],
+            ),
+            SizedBox(height: defaultPadding / 2),
+            Text(
+              level,
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
             SizedBox(height: defaultPadding / 2),
             LinearProgressIndicator(

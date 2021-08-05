@@ -16,76 +16,80 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: Column(
-        children: [
-          MyInfo(),
-          Expanded(
-            child: SingleChildScrollView(
-              padding: EdgeInsets.all(defaultPadding),
-              child: Column(
-                children: [
-                  AreaInfoText(
-                    title: 'Country',
-                    subTitle: 'Indonesia',
-                  ),
-                  AreaInfoText(
-                    title: 'City',
-                    subTitle: 'Makassar',
-                  ),
-                  AreaInfoText(
-                    title: 'Age',
-                    subTitle: '22',
-                  ),
-                  Skills(),
-                  Coding(),
-                  Knowladge(),
-                  Divider(),
-                  SizedBox(height: defaultPadding / 2),
-                  TextButton(
-                    onPressed: () {},
-                    child: FittedBox(
-                      child: Row(
-                        children: [
-                          Text(
-                            'Download CV',
-                            style: TextStyle(
-                              color:
-                                  Theme.of(context).textTheme.bodyText1!.color,
+    return SafeArea(
+      child: Drawer(
+        child: Column(
+          children: [
+            MyInfo(),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: EdgeInsets.all(defaultPadding),
+                child: Column(
+                  children: [
+                    AreaInfoText(
+                      title: 'Country',
+                      subTitle: 'Indonesia',
+                    ),
+                    AreaInfoText(
+                      title: 'City',
+                      subTitle: 'Makassar',
+                    ),
+                    AreaInfoText(
+                      title: 'Age',
+                      subTitle: '22',
+                    ),
+                    Skills(),
+                    Coding(),
+                    Knowladge(),
+                    Divider(),
+                    SizedBox(height: defaultPadding / 2),
+                    TextButton(
+                      onPressed: () {},
+                      child: FittedBox(
+                        child: Row(
+                          children: [
+                            Text(
+                              'Download CV',
+                              style: TextStyle(
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color,
+                              ),
                             ),
+                            SizedBox(width: defaultPadding / 2),
+                            SvgPicture.asset('assets/icons/download.svg'),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: defaultPadding),
+                      color: Color(0xFF24242E),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset('assets/icons/linkedin.svg'),
                           ),
-                          SizedBox(width: defaultPadding / 2),
-                          SvgPicture.asset('assets/icons/download.svg'),
+                          IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset('assets/icons/github.svg'),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset('assets/icons/dribble.svg'),
+                          ),
                         ],
                       ),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: defaultPadding),
-                    color: Color(0xFF24242E),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: SvgPicture.asset('assets/icons/linkedin.svg'),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: SvgPicture.asset('assets/icons/github.svg'),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: SvgPicture.asset('assets/icons/dribble.svg'),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

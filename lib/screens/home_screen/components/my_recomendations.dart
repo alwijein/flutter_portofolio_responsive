@@ -15,7 +15,10 @@ class MyRecomendations extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Recomendations'),
+          Text(
+            'Recommendations',
+            style: Theme.of(context).textTheme.headline6,
+          ),
           SizedBox(height: defaultPadding / 2),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,

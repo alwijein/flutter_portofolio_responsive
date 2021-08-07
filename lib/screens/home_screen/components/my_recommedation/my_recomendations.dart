@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/models/Recommendation.dart';
-import 'package:flutter_portofolio/screens/home_screen/components/my_recomendation_list.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
+
+part 'my_recomendation_list.dart';
 
 class MyRecomendations extends StatelessWidget {
   const MyRecomendations({

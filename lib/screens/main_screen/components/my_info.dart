@@ -1,4 +1,6 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_portofolio/shared/shared.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({
@@ -8,15 +10,23 @@ class MyInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.23,
+      aspectRatio: 0.9,
       child: Container(
         color: Color(0xFF242430),
         child: Column(
           children: [
             Spacer(flex: 2),
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage('assets/images/profile.png'),
+            AvatarGlow(
+              glowColor: primaryColor,
+              endRadius: 90.0,
+              duration: Duration(milliseconds: 2000),
+              repeat: true,
+              showTwoGlows: true,
+              repeatPauseDuration: Duration(milliseconds: 100),
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('assets/images/profile.png'),
+              ),
             ),
             Spacer(),
             Text(

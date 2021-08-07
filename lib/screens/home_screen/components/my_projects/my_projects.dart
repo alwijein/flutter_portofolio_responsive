@@ -1,8 +1,11 @@
+import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/config/config.dart';
 import 'package:flutter_portofolio/models/Project.dart';
-import 'package:flutter_portofolio/screens/home_screen/components/project_card.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
+
+part 'project_card.dart';
+part 'project_grid_view.dart';
 
 class MyProjects extends StatelessWidget {
   const MyProjects({
@@ -33,34 +36,6 @@ class MyProjects extends StatelessWidget {
           desktop: ProjectGridView(),
         ),
       ],
-    );
-  }
-}
-
-class ProjectGridView extends StatelessWidget {
-  const ProjectGridView({
-    Key? key,
-    this.crossAxisCount = 3,
-    this.childAspectRatio = 1.3,
-  }) : super(key: key);
-  final int crossAxisCount;
-  final double childAspectRatio;
-  @override
-  Widget build(BuildContext context) {
-    return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: crossAxisCount,
-        childAspectRatio: childAspectRatio,
-        crossAxisSpacing: defaultPadding,
-        mainAxisSpacing: defaultPadding,
-      ),
-      itemCount: demo_projects.length,
-      shrinkWrap: true,
-      itemBuilder: (_, index) {
-        return ProjectCard(
-          project: demo_projects[index],
-        );
-      },
     );
   }
 }

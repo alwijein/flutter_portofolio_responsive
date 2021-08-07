@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/screens/main_screen/components/animated_linear_progres_indicator.dart';
 import 'package:flutter_portofolio/shared/shared.dart';

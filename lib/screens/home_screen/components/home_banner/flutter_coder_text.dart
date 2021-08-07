@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_portofolio/shared/shared.dart';
+part of 'home_banner.dart';
 
 class FlutterCoderText extends StatelessWidget {
   const FlutterCoderText({

@@ -1,7 +1,10 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/config/config.dart';
-import 'package:flutter_portofolio/screens/home_screen/components/my_build_animated_text.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
+
+part 'flutter_coder_text.dart';
+part 'my_build_animated_text.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({

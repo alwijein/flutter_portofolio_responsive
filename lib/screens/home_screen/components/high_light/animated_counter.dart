@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_portofolio/shared/shared.dart';
+part of 'high_light.dart';
 
 class AnimatedCounter extends StatelessWidget {
   const AnimatedCounter({

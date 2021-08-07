@@ -7,6 +7,7 @@ import 'package:flutter_portofolio/screens/main_screen/components/knowladge_text
 import 'package:flutter_portofolio/screens/main_screen/components/my_info.dart';
 import 'package:flutter_portofolio/screens/main_screen/components/skills.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
+import 'package:flutter_portofolio/utils/utils.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SideMenu extends StatelessWidget {
@@ -74,7 +75,9 @@ class SideMenu extends StatelessWidget {
                             icon: SvgPicture.asset('assets/icons/linkedin.svg'),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              launchURL('https://github.com/alwijein');
+                            },
                             icon: SvgPicture.asset('assets/icons/github.svg'),
                           ),
                           IconButton(

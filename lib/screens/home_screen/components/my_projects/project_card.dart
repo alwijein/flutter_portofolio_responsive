@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_portofolio/models/Project.dart';
-import 'package:flutter_portofolio/shared/shared.dart';
+part of 'my_projects.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({

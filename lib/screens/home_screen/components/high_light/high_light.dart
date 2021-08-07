@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portofolio/screens/home_screen/components/animated_counter.dart';
+import 'package:flutter_portofolio/config/config.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
+
+part 'high_light_info.dart';
+part 'animated_counter.dart';
 
 class HighLight extends StatelessWidget {
   const HighLight({

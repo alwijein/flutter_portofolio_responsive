@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_portofolio/config/config.dart';
-import 'package:flutter_portofolio/screens/home_screen/components/high_light.dart';
-import 'package:flutter_portofolio/shared/shared.dart';
+part of 'high_light.dart';
 
 class HighLightInfo extends StatelessWidget {
   const HighLightInfo({

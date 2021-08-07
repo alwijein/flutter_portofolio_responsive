@@ -1,8 +1,4 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_portofolio/config/config.dart';
-import 'package:flutter_portofolio/screens/home_screen/components/flutter_coder_text.dart';
-import 'package:flutter_portofolio/shared/shared.dart';
+part of 'home_banner.dart';
 
 class MyBuildAnimatedText extends StatelessWidget {
   const MyBuildAnimatedText({

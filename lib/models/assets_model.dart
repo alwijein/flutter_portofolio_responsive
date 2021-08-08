@@ -41,4 +41,9 @@ List<AssetModel> myAllAsset = [
     path: 'assets/images/mockup.png',
     categories: 'UI/UX',
   ),
+  AssetModel(
+    title: 'UI - Mobile Vocab Daily',
+    path: 'assets/images/vocab_daily_mockup.png',
+    categories: 'Mobile App',
+  ),
 ];

@@ -5,11 +5,12 @@ class AssetGridView extends StatelessWidget {
     Key? key,
     this.crossAxisCount = 3,
     this.childAspectRatio = 1,
-    this.selectedIndex = 0,
+    required this.selectedIndex,
     required this.filterAssetModel,
   }) : super(key: key);
+
   final int crossAxisCount, childAspectRatio, selectedIndex;
-  final List filterAssetModel;
+  final List<AssetModel> filterAssetModel;
 
   @override
   Widget build(BuildContext context) {

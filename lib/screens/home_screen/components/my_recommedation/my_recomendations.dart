@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portofolio/models/Recommendation.dart';
+import 'package:flutter_portofolio/models/education_model.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
 
 part 'my_recomendation_list.dart';
@@ -25,11 +25,11 @@ class MyRecomendations extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: List.generate(
-                demo_recommendations.length,
+                educationModel.length,
                 (index) => Padding(
                   padding: EdgeInsets.only(right: defaultPadding),
                   child: MyRecomendationList(
-                      recommendation: demo_recommendations[index]),
+                      educationModel: educationModel[index]),
                 ),
               ),
             ),

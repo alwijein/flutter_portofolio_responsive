@@ -55,7 +55,7 @@ class SplashScreen extends StatelessWidget {
             ),
             SizedBox(height: defaultPadding / 2),
             LinearProgressIndicator(
-              minHeight: ResponsiveConfig.isMobile(context) ? 4 : 5.5,
+              minHeight: ResponsiveConfig.isMobile(context) ? 4 : 5,
               value: value,
               color: primaryColor,
               backgroundColor: darkColor,
@@ -63,7 +63,9 @@ class SplashScreen extends StatelessWidget {
             SizedBox(height: defaultPadding / 2),
             Text(
               (value * 100).toInt().toString() + '%',
-              style: Theme.of(context).textTheme.subtitle2,
+              style: ResponsiveConfig.isMobile(context)
+                  ? Theme.of(context).textTheme.subtitle2
+                  : Theme.of(context).textTheme.headline5,
             ),
           ],
         ),

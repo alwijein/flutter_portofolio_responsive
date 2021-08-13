@@ -3,10 +3,10 @@ part of 'my_recomendations.dart';
 class MyRecomendationList extends StatelessWidget {
   const MyRecomendationList({
     Key? key,
-    required this.recommendation,
+    required this.educationModel,
   }) : super(key: key);
 
-  final Recommendation recommendation;
+  final EducationModel educationModel;
 
   @override
   Widget build(BuildContext context) {
@@ -14,24 +14,33 @@ class MyRecomendationList extends StatelessWidget {
       width: 400,
       padding: EdgeInsets.all(defaultPadding),
       color: secondaryColor,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            recommendation.name,
-            style: Theme.of(context).textTheme.subtitle2,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                educationModel.title,
+                style: Theme.of(context).textTheme.subtitle2,
+              ),
+              Text(
+                educationModel.subTitle,
+              ),
+              SizedBox(height: defaultPadding),
+              Text(
+                educationModel.year,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 4,
+                style: TextStyle(
+                  height: 1.5,
+                ),
+              ),
+            ],
           ),
-          Text(
-            recommendation.source,
-          ),
-          SizedBox(height: defaultPadding),
-          Text(
-            recommendation.text,
-            overflow: TextOverflow.ellipsis,
-            maxLines: 4,
-            style: TextStyle(
-              height: 1.5,
-            ),
+          Image.asset(
+            educationModel.imgPath,
+            height: 80,
           ),
         ],
       ),

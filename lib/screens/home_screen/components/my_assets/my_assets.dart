@@ -49,7 +49,7 @@ class _MyAssetsState extends State<MyAssets> {
           ResponsiveConfig(
             mobile: AssetGridView(
               filterAssetModel: filterCategories,
-              crossAxisCount: 2,
+              crossAxisCount: 1,
               // childAspectRatio: 2,
               selectedIndex: selectedIndex,
             ),

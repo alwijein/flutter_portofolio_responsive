@@ -39,7 +39,7 @@ List<AssetModel> myAllAsset = [
   AssetModel(
     title: 'UI Pinisi Parking Spot',
     path: 'assets/images/mockup.png',
-    categories: 'UI/UX',
+    categories: 'Mobile App',
   ),
   AssetModel(
     title: 'UI - Mobile Vocab Daily',

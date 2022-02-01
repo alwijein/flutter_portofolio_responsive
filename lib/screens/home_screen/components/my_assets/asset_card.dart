@@ -30,8 +30,13 @@ class AssetCard extends StatelessWidget {
             SizedBox(height: defaultPadding),
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
-                assetModel.path,
+              child: CachedNetworkImage(
+                imageUrl: assetModel.path,
+                progressIndicatorBuilder: (context, url, downloadProgress) =>
+                    Center(
+                        child: LinearProgressIndicator(
+                            value: downloadProgress.progress)),
+                errorWidget: (context, url, error) => Icon(Icons.error),
               ),
             ),
           ],

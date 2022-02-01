@@ -1,9 +1,12 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:delayed_display/delayed_display.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_portofolio/bloc/page_bloc.dart';
 import 'package:flutter_portofolio/config/config.dart';
 import 'package:flutter_portofolio/models/assets_model.dart';
+import 'package:flutter_portofolio/screens/components/shimmer_asset.dart';
+import 'package:flutter_portofolio/services/database_services.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -23,7 +26,7 @@ class _MyAssetsState extends State<MyAssets> {
   List<String> categories = ['All', 'UI/UX', '3D Animation', 'Mobile App'];
   int selectedIndex = 0;
 
-  List<AssetModel> filterCategories = [];
+  String filterCategories = 'All';
 
   @override
   Widget build(BuildContext context) {
@@ -76,25 +79,8 @@ class _MyAssetsState extends State<MyAssets> {
     return GestureDetector(
       onTap: () {
         setState(() {
+          filterCategories = categories[index];
           selectedIndex = index;
-          filterCategories = myAllAsset
-              .where((AssetModel) => AssetModel.categories == categories[index])
-              .toList();
-          switch (selectedIndex) {
-            case 0:
-              context.read<PageBloc>().add(GoToAllPage());
-              break;
-            case 1:
-              context.read<PageBloc>().add(GoToUiUxPage());
-              break;
-            case 2:
-              context.read<PageBloc>().add(GoTo3DAnimationPage());
-              break;
-            case 3:
-              context.read<PageBloc>().add(GoToMobilePage());
-              break;
-            default:
-          }
         });
       },
       child: Padding(

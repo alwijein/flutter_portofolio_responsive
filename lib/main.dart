@@ -1,4 +1,5 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_portofolio/config/config.dart';
@@ -7,7 +8,18 @@ import 'package:flutter_portofolio/shared/shared.dart';
 
 import 'bloc/page_bloc.dart';
 
-void main() {
+void main() async {
+  // if (Firebase.apps.isNotEmpty) {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+        apiKey:
+            "AAAAf9oGDhs:APA91bGrc_OYGPXfMe3hOtSlq3VNLjKmAi-0v31S8Xd0ZKVyJJ2yk3pHbYCeMPkhzeR48Mup5qyNeh0YfwDvLnQyurl6OhNw5ezgHsIvg0zuLiedxQz6G40n5jIyiKSS0qTmQFWVTyuR",
+        projectId: "flutter-portofolio",
+        messagingSenderId: "549118676507",
+        appId: "1:549118676507:android:81d0c93b84f78f9c2e72be"),
+  );
+  // }
   runApp(MyApp());
 }
 

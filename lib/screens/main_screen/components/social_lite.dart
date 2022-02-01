@@ -40,6 +40,24 @@ class SocialLite extends StatelessWidget {
               color: Color(0xFF8c8c8e),
             ),
           ),
+          IconButton(
+            onPressed: () {
+              launchURL('https://dribbble.com/alwijein');
+            },
+            icon: SvgPicture.asset(
+              'assets/icons/dribble.svg',
+              color: Color(0xFF8c8c8e),
+            ),
+          ),
+          IconButton(
+            onPressed: () {
+              launchURL('https://www.linkedin.com/in/alwi-jein-465b7a176');
+            },
+            icon: SvgPicture.asset(
+              'assets/icons/linkedin.svg',
+              color: Color(0xFF8c8c8e),
+            ),
+          ),
         ],
       ),
     );

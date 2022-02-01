@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portofolio/config/config.dart';
 import 'package:flutter_portofolio/models/Project.dart';
+import 'package:flutter_portofolio/screens/components/shimmer_project.dart';
+import 'package:flutter_portofolio/services/database_services.dart';
 import 'package:flutter_portofolio/shared/shared.dart';
+import 'package:flutter_portofolio/utils/utils.dart';
 
 part 'project_card.dart';
 part 'project_grid_view.dart';

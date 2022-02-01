@@ -33,7 +33,9 @@ class ProjectCard extends StatelessWidget {
           ),
           Spacer(),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              launchURL(project.directLink);
+            },
             child: Text(
               'Read More',
               style: TextStyle(

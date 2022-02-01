@@ -10,21 +10,42 @@ class ProjectGridView extends StatelessWidget {
   final double childAspectRatio;
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      physics: NeverScrollableScrollPhysics(),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: crossAxisCount,
-        childAspectRatio: childAspectRatio,
-        crossAxisSpacing: defaultPadding,
-        mainAxisSpacing: defaultPadding,
-      ),
-      itemCount: demo_projects.length,
-      shrinkWrap: true,
-      itemBuilder: (_, index) {
-        return ProjectCard(
-          project: demo_projects[index],
-        );
-      },
-    );
+    return FutureBuilder<dynamic>(
+        future: DatabaseServices.projects(),
+        builder: (_, snapshot) {
+          if (snapshot.hasData) {
+            return GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: crossAxisCount,
+                childAspectRatio: childAspectRatio,
+                crossAxisSpacing: defaultPadding,
+                mainAxisSpacing: defaultPadding,
+              ),
+              itemCount: snapshot.data?.length,
+              shrinkWrap: true,
+              itemBuilder: (_, index) {
+                return ProjectCard(
+                  project: snapshot.data![index],
+                );
+              },
+            );
+          } else {
+            return GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: crossAxisCount,
+                childAspectRatio: childAspectRatio,
+                crossAxisSpacing: defaultPadding,
+                mainAxisSpacing: defaultPadding,
+              ),
+              itemCount: 3,
+              shrinkWrap: true,
+              itemBuilder: (_, index) {
+                return ShimmerProject();
+              },
+            );
+          }
+        });
   }
 }
